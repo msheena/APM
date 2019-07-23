@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.mixed.apm">
     <application>
-        <activity android:name=".DefaultErrorActivity">
-        </activity>
+        <activity android:name=".CustomActivityOnCrash"/>
+        <activity android:name=".DefaultErrorActivity"/>
+
     </application>
 </manifest>
