@@ -6,11 +6,11 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.text.SpannableStringBuilder
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import java.io.PrintWriter
 import java.io.StringWriter
 import java.lang.Exception
