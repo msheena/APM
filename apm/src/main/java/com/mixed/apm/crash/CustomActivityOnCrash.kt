@@ -8,9 +8,9 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.support.v7.app.AppCompatActivity
 import android.text.SpannableStringBuilder
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
 import java.io.PrintWriter
 import java.io.StringWriter
 import java.lang.Exception
@@ -172,13 +172,13 @@ class CustomActivityOnCrash : AppCompatActivity() {
          * android:name="com.mixed.apm.CustomActivityOnCrash.Error" />,
          * if it cannot find them, then it will use the default error activity.
          */
-        private fun guessErrorActivityClass(context: Context): Class<out Activity> {
+        private fun guessErrorActivityClass(context: Context): Class<out Activity>? {
             var resolvedActivityClass: Class<out Activity>?
 
             resolvedActivityClass = getErrorActivityClassWithIntentFilter(context)
 
             if (resolvedActivityClass == null) {
-                resolvedActivityClass = DefaultErrorActivity::class.java
+                resolvedActivityClass = DefaultErrorActivity::class.java as Class<out Activity>?
             }
 
             return resolvedActivityClass
